@@ -140,6 +140,22 @@
         <source-file src="src/wp/Device.cs" />
     </platform>
 
+    <!-- Windows Phone 8.x -->
+    <platform name="winphone">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Device">
+                <param name="wp-package" value="Device"/>
+            </feature>
+        </config-file>
+
+        <config-file target="Properties/WMAppManifest.xml" parent="/Deployment/App/Capabilities">
+            <Capability Name="ID_CAP_IDENTITY_DEVICE" />
+        </config-file>
+
+        <source-file src="src/wp/Device.cs" />
+    </platform>
+
+
     <!-- windows -->
     <platform name="windows">
         <js-module src="src/windows/DeviceProxy.js" name="DeviceProxy">
